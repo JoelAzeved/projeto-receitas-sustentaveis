@@ -1,0 +1,57 @@
+.recipe-search-container {
+  text-align: center;
+  padding: 20px;
+
+  h2 {
+    padding: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .input {
+    padding: 10px;
+    margin: 20px;
+    width: 80%;
+    max-width: 400px;
+  }
+
+  .button {
+    padding: 10px 20px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+
+    &:disabled {
+      background-color: #ccc;
+      cursor: not-allowed;
+    }
+
+    &:hover:enabled {
+      background-color: #45a049;
+    }
+  }
+
+  .error {
+    color: red;
+    margin-top: 10px;
+  }
+
+  .result-container {
+    margin-top: 20px;
+    text-align: left;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+
+    .recipe-content {
+      text-align: center;
+
+      p {
+        margin-bottom: 15px;
+      }
+    }
+  }
+}

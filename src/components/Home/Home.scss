@@ -1,0 +1,26 @@
+.home-container {
+  text-align: center;
+  padding: 20px;
+
+  h1 {
+    margin-bottom: 20px;
+  }
+
+  p {
+    font-size: 18px;
+    margin-bottom: 30px;
+  }
+
+  .image-gallery {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    img {
+      width: 200px;
+      height: auto;
+      margin: 10px;
+      border-radius: 10px;
+    }
+  }
+}
