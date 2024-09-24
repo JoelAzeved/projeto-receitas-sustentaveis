@@ -24,8 +24,7 @@ const RecipeSearch: React.FC = () => {
         chatHistory: [
           {
             role: 'USER',
-            message: `Crie somente uma receita aleatoria em português com base nos seguintes ingredientes: ${ingredients}.
-            no final uma frase para conscientização de aproveitamento de frutas maduras somente 2 linhas`,
+            message: `Crie somente uma receita aleatoria em português com base nos seguintes ingredientes: ${ingredients}.`,
           },
         ],
         connectors: [
@@ -58,6 +57,12 @@ const RecipeSearch: React.FC = () => {
     }
   };
 
+  const handleKeyPress = (event: React.KeyboardEvent<HTMLInputElement>) => {
+    if (event.key === 'Enter') {
+      getRecipe();
+    }
+  };
+
   // Formata o texto da receita
   const formatRecipe = (recipe: string): string => {
     const paragraphs = recipe.split('\n\n').map(p => `<p>${p.trim()}</p>`).join('\n');
@@ -72,9 +77,10 @@ const RecipeSearch: React.FC = () => {
         placeholder="Digite as frutas que você tem (ex: banana, maçã)"
         value={ingredients}
         onChange={(e) => setIngredients(e.target.value)}
+        onKeyDown={handleKeyPress}
         className="input"
       />
-      <button onClick={getRecipe} className="button" disabled={loading}>
+      <button onClick={getRecipe} className="button" disabled={loading} onKeyUpCapture={getRecipe}>
         {loading ? 'Buscando...' : 'Buscar Receita'}
       </button>
       {error && <p className="error">{error}</p>}

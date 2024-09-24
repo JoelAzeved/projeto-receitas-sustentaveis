@@ -12,12 +12,7 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
 
-}
 a {
   font-weight: 500;
   color: #646cff;
@@ -31,7 +26,8 @@ body {
   margin: 0;
   display: flex;
   place-items: center;
-  min-width: 320px;
+  justify-content: center;
+  min-width: 400px;
   min-height: 100vh;
 }
 

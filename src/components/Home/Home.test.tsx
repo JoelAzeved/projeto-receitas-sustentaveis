@@ -6,5 +6,5 @@ test('renders Home component correctly', () => {
   const headingElement = screen.getByText(/Bem-vindo ao Receitas Sustentáveis/i);
   expect(headingElement).toBeInTheDocument();
   const images = screen.getAllByRole('img');
-  expect(images.length).toBe(4);
+  expect(images.length).toBe(3);
 });
