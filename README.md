@@ -45,11 +45,17 @@ cd projeto-receitas-sustentaveis
 
 3. Instale as dependências:
 
-```npm install ```
+```bash
+npm install 
+```
 
 4. Crie um arquivo .env na raiz do projeto e adicione sua chave da API da Cohere. Isso permitirá que a aplicação utilize a API de receitas:
 
-```VITE_COHERE_API_KEY=sua_chave_aqui```
+```bash
+VITE_COHERE_API_KEY=sua_chave_aqui
+```
 
 5. Agora, execute o projeto localmente com o comando abaixo. O Vite compilará e servirá a aplicação em um servidor de desenvolvimento:
-``` npm run dev```
+```bash
+ npm run dev
+ ```
